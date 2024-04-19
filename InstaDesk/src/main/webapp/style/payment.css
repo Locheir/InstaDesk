@@ -1,0 +1,34 @@
+@charset "ISO-8859-1";
+.mohit_border{
+
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 30px;
+    background-color: white;
+}
+
+body{
+
+    background: linear-gradient(#132E35,#132E35);
+}
+
+.my_heading{
+
+    color:white;
+
+}
+
+.save_btn{
+
+    border: 2px solid #0D1F23;
+    border-radius: 5px;
+    background-color: #0D1F23;
+    padding: 10px 25px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .save_btn:hover{
+      background-color: white;
+      color: #0D1F23;
+    }

@@ -1,0 +1,145 @@
+@charset "ISO-8859-1";
+/*  CSS Reset  */
+*{
+	margin:0;
+	padding:0;
+    box-sizing: border-box;
+}
+
+/*  CSS Variables  */
+:root{
+	--navbar-height:59px;
+}
+
+/*  Navigation Bar  */
+#navbar{
+	/* position:relative; */
+	display:flex;
+	align-items:center;
+  justify-content: space-between;
+  padding-right: 25px;
+  position: fixed;
+  height: 90px;
+  top: 0;
+  width: 100%;
+  z-index: 10; 
+  transition: background-color 0.5s ease-in-out;
+}
+
+#navbar::before{
+    content: "";
+    background-color: #132E35;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    /*opacity: 0.4;*/
+}
+
+.sticky{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: #0D1F23;
+}
+
+/*  Navigation Bar : Logo and Image Styling  */
+#logo{
+	margin:9px 35px;
+}
+
+#logo img{
+	height:56px;
+	margin:10px 20px;
+  border-radius: 50%;
+  border: 2px solid white;
+  transition: border 0.5s ease-in-out;
+}
+
+/*  Navigation Bar : List Items Styling  */
+#navbar ul{
+	display:flex;
+}
+
+#navbar ul li{
+	list-style:none;
+	font-size:1.5rem;
+}
+
+#navbar button {
+    font-size: 0.8rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#navbar ul li a{
+	color:white;
+	display:block;
+	padding: 3px 22px;
+	border-radius: 20px;
+	text-decoration: none;
+}
+
+#navbar ul li a:hover{
+	color:#0D1F23;
+	background:white;
+}
+
+#navbar button {
+  background-color: #0D1F23;
+  margin-left: 10px;
+  border-radius: 10px;
+  border-color: white;
+  padding: 10px;
+}
+
+#navbar button a{
+  color:whitesmoke;
+  padding: 3px 22px;
+  text-decoration: none;
+}
+
+#navbar button:hover{
+  background-color: #11282d;
+}
+
+.about_us{
+    /* background-color: seagreen; */
+    margin-top:80px;
+    padding-top: 4px;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.about_us .container1{
+    align-items: center;
+    text-align: center;
+    display: flex;
+    right: 10px;
+    margin-left: auto;
+}
+.about_us_img img{
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.about_us_desc{
+    /* background-color: seagreen; */
+    background-position: center;
+    padding: 30px 120px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-flow: column;
+}
+.about_us_desc h2{
+    text-align: center;
+    margin-bottom: 10px;
+    
+}
+.about_us_desc p{
+    padding: 8px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+}

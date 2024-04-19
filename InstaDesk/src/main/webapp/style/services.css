@@ -1,0 +1,203 @@
+
+/*  CSS Reset  */
+*{
+    box-sizing: border-box;
+	margin:0;
+	padding:0;
+}
+
+/*  CSS Variables  */
+:root{
+	--navbar-height:59px;
+}
+
+/*  Navigation Bar  */
+#navbar{
+	/* position:relative; */
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  position: fixed;
+  padding-right: 25px;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+#navbar::before{
+    content: "";
+    background-color: #132E35;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    /*opacity: 0.4;*/
+}
+
+.sticky{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+/*  Navigation Bar : Logo and Image Styling  */
+#logo{
+	margin:9px 35px;
+}
+
+#logo img{
+	height:56px;
+	margin:10px 20px;
+    border-radius: 50% ;
+    border: 2px solid white;
+}
+
+/*  Navigation Bar : List Items Styling  */
+#navbar ul{
+	display:flex;
+}
+
+#navbar ul li{
+	list-style:none;
+	font-size:1.5rem;
+}
+
+#navbar button {
+    font-size: 0.8rem;
+}
+
+#navbar ul li a{
+	color:white;
+	display:block;
+	padding: 3px 22px;
+	border-radius: 20px;
+	text-decoration: none;
+}
+
+#navbar ul li a:hover{
+	color:#0D1F23;
+	background:white;
+}
+
+#navbar button {
+  background-color: #0D1F23;
+  margin-left: 10px;
+  border-radius: 10px;
+  border-color: white;
+  padding: 10px;
+}
+
+#navbar button a{
+  color:whitesmoke;
+  padding: 3px 22px;
+  text-decoration: none;
+}
+
+#navbar button:hover{
+  background-color: #11282d;
+}
+
+/* Content */
+.container{
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 150px;
+  padding : 10px 20px;
+}
+
+.repair{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.repair-image{
+  flex: 1;
+  margin-right: 40px;
+  overflow: hidden;
+}
+
+.repair-image img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+  transition: 0.5s ease;
+}
+
+.repair-image:hover img{
+  transform: scale(1.2);
+}
+
+.repair-content{
+  flex:1;
+}
+
+.repair-content h2{
+  font-size: 23px;
+  margin-bottom: 15px;
+  color:#333;
+  font-family: 'Roboto',sans-serif;
+}
+
+.repair-content p{
+  font-size: 18px;
+  line-height: 1.5;
+  color:#666;
+}
+
+.repair-content .book-now{
+  display: inline-block;
+  padding: 10px 20px;
+  color:#fff;
+  background-color: #0D1F23;
+  font-size: 19px;
+  text-decoration: none;
+  border-radius:25px ;
+  margin-top:15px ;
+  transition: 0.3s ease;
+}
+
+.repair-content .book-now:hover{
+  background-color: #3e8e41;
+}
+
+/* Footer Section */
+footer{
+  background-color: #0D1F23;
+  color: white;
+  padding: 20px;
+}
+
+/* Utility Classes */
+.h-primary{
+    font-size: 2.7rem;
+    padding: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:black;
+}
+
+.h-secondary{
+    font-size: 1.6rem;
+    padding: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.p-primary{
+    font-size: 1.2rem;
+    padding: 15px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+.center{
+    text-align: center;
+}
+
+.whi{
+    color:white;
+}
+

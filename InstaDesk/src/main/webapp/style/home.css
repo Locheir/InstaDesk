@@ -1,0 +1,371 @@
+@charset "ISO-8859-1";
+/*  CSS Reset  */
+*{
+	margin:0;
+	padding:0;
+    box-sizing: border-box;
+}
+
+/*  CSS Variables  */
+:root{
+	--navbar-height:59px;
+}
+
+/*  Navigation Bar  */
+#navbar{
+	/* position:relative; */
+	display:flex;
+	align-items:center;
+  justify-content: space-between;
+  padding-right: 25px;
+  position: fixed;
+  height: 90px;
+  top: 0;
+  width: 100%;
+  z-index: 10; 
+  transition: background-color 0.5s ease-in-out;
+}
+
+#navbar::before{
+    content: "";
+    background-color: #132E35;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    /*opacity: 0.4;*/
+}
+
+.sticky{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: #0D1F23;
+}
+
+/*  Navigation Bar : Logo and Image Styling  */
+#logo{
+	margin:9px 35px;
+}
+
+#logo img{
+	height:56px;
+	margin:10px 20px;
+  border-radius: 50%;
+  border: 2px solid white;
+  transition: border 0.5s ease-in-out;
+}
+
+/*  Navigation Bar : List Items Styling  */
+#navbar ul{
+	display:flex;
+}
+
+#navbar ul li{
+	list-style:none;
+	font-size:1.5rem;
+}
+
+#navbar button {
+    font-size: 0.8rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#navbar ul li a{
+	color:white;
+	display:block;
+	padding: 3px 22px;
+	border-radius: 20px;
+	text-decoration: none;
+}
+
+#navbar ul li a:hover{
+	color:#0D1F23;
+	background:white;
+}
+
+#navbar button {
+  background-color: #0D1F23;
+  margin-left: 10px;
+  border-radius: 10px;
+  border-color: white;
+  padding: 10px;
+}
+
+#navbar button a{
+  color:whitesmoke;
+  padding: 3px 22px;
+  text-decoration: none;
+}
+
+#navbar button:hover{
+  background-color: #11282d;
+}
+
+/* Utility Classes */
+.h-primary{
+    font-size: 2.7rem;
+    padding: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:black;
+}
+
+.h-secondary{
+    font-size: 1.6rem;
+    padding: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.p-primary{
+    font-size: 1.2rem;
+    padding: 15px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+.center{
+    text-align: center;
+}
+
+.whi{
+    color:white;
+}
+
+/* Header Section */
+
+.header{
+    margin-top:60px;
+    min-height: 100vh;
+    width:100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('../images/header_back.JPG');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    font-family: "Poppins", sans-serif;
+}
+
+.about-us{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.about-us h1{
+    font-size: 62px;
+}
+
+.about-us p{
+    margin: 10px 0px 40px;
+    font-size:14px;
+    color:#fff;
+}
+
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover{
+    border: 1px solid #3e8e41;
+    background-color: #3e8e41;
+    transition: 1s;
+}
+
+/* Products Section */
+
+.products{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.products h1{
+    font-family: "Poppins", sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.products p{
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+    color:#777;
+}
+
+.row{
+    margin-top:5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.prod_col{
+    flex-basis:31%;
+    background:#99e19b;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding:20px 12px;
+    box-sizing: border-box;
+}
+
+.prod_col h3{
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    color:#132E35;
+    font-weight: 600;
+    margin:10px 0;
+}
+
+.prod_col p{
+    font-family: "Poppins", sans-serif;
+    color:#777;
+}
+
+.prod_col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+@media(max-width: 700px) {
+    .row{
+        flex-direction: column;
+    }
+}
+
+/* Services Section */
+
+.services{
+    width: 80%;
+    margin:auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.services h1{
+    font-family: "Poppins", sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.services p{
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+    color:#777;
+}
+
+.services_col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.services_col img{
+    width: 100%;
+}
+
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    transition: 0.5s;;
+}
+
+.layer:hover{
+    background: rgba(90, 99, 106, 0.7);
+}
+
+.layer h3{
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    font-weight: 600;
+    color:#fff;
+    font-size: 26px;
+    bottom:0;
+    left:50%;
+    transform: translate(-50%);
+    position:absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+/* Queries Section */
+
+.queries{
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('../images/banner2.jpg');
+    background-position: center;
+    background-size: cover;
+    border-radius:10px ;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.queries h1{
+    color:#fff;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+/* Socials Section */
+
+.socials{
+    width: 80%;
+    text-align: center;
+    margin:auto;
+    padding: 30px 0;
+    margin-bottom: 40px;
+}
+
+.socials h3{
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 25px;
+    margin-top:20px ;
+    font-weight: 600;
+}
+
+.socials p{
+    font-family: "Poppins", sans-serif;
+}
+
+.icons .fa{
+    color:#3e8e41;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+
+/* Footer Section */
+footer{
+    background-color: #0D1F23;
+    color: white;
+    padding: 20px;
+  }
